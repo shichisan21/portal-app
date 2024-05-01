@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import axios from "axios";
@@ -7,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/hello");
+        const response = await axios.get("api/hello");
         console.log(response.data);
       } catch (error) {
         console.log("error", error);
